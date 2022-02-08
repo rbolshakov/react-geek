@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Messages } from './Components/Messages/Messages'
 
-export function App() {
+function App() {
   const text = 'Some Text'
   return (
     <div className="App">
@@ -26,4 +26,4 @@ export function App() {
     </div>
   );
 }
-
+export default App;
