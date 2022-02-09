@@ -24,5 +24,10 @@ module.exports = {
         react: {
             version: 'detect',
         },
+    },
+
+    "env": {
+        "browser": true,
+        "jest": true
     }
 }
