@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Messages } from './Components/Messages/Messages'
+import { Messages } from './Components/Messages/Messages';
 
-function App() {
-  const text = 'Some Text'
+export function App() {
+  const text = 'Some Text';
   return (
     <div className="App">
       <div className="app-wrapper">
@@ -27,4 +27,3 @@ function App() {
     </div>
   );
 }
-export default App;

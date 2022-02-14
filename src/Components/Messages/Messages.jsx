@@ -1,5 +1,5 @@
-import React from "react"
-import s from './Messages.module.css'
+import React from 'react';
+import s from './Messages.module.css';
 
 export const Messages = (props) => {
   return (
@@ -10,11 +10,5 @@ export const Messages = (props) => {
         </div>
       </div>
     </div>
-  )
-}
-
-
-
-
-
-
+  );
+};
