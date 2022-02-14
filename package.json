@@ -5,10 +5,7 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "lint": "npx eslint ./ --ext .js,.jsx --fix",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "loki:update": "npx loki update",
-    "loki:test": "npx loki test"
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +26,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.5.6",
+    "husky": "^7.0.4",
     "loki": "^0.28.1",
     "prettier": "^2.5.1",
     "webpack": "^5.68.0",

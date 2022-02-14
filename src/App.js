@@ -22,7 +22,7 @@ export function App() {
             Learn React
           </a>
         </header>
-        <Messages text={text} />
+        {/* <Messages text={text} /> */}
       </div>
     </div>
   );
