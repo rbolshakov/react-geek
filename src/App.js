@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import { ChatForm } from './Components/ChatForm/ChatForm';
-import { Message } from './Components/Messages/Message';
 
 export function App() {
-  const text = 'lorem lorem lorem lorem';
   const [messageList, setMessageList] = useState([]);
   const changeMessageList = (newMessage) => {
     setMessageList([...messageList, newMessage]);
@@ -25,9 +23,6 @@ export function App() {
 
   return (
     <div className="App">
-      <header>
-        <Message text={text} />
-      </header>
       <div className="chatWindow container">
         {messageList.map((el, i) => {
           return (
