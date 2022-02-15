@@ -1,14 +1,17 @@
-import React, { FC } from 'react';
-import { Message } from '../../App'
+import React, { FC } from "react";
+import { Message } from "../../App";
+import "./Message.css";
 
 interface MessageListProp {
-  messages: Message[]
+  messages: Message[];
 }
 
 export const MessageList: FC<MessageListProp> = ({ messages }) => (
-  <ul>
-    {messages.map(message =>
-      <li key={message.id}>{message.author}: {message.text}</li>
-    )}
+  <ul className="messageList">
+    {messages.map((message) => (
+      <li className="message" key={message.id}>
+        <span className="messageAuthor">{message.author}:</span> {message.text}
+      </li>
+    ))}
   </ul>
 );

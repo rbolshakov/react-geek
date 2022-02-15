@@ -17,7 +17,6 @@ const botAuthors: string[] = [
   "Dieter Rams",
   "Thomas Chippendale",
   "Karim Rashid",
-
   "Ron Arad",
 ];
 
@@ -80,10 +79,10 @@ export const App: FC = () => {
   };
 
   return (
-    <>
-      <h1>Welcome to react</h1>
+    <div className="messageWrap container">
+      <h1 className="messageTitle">Welcome to react</h1>
       <MessageList messages={messages} />
       <Form addMessage={addMessage} />
-    </>
+    </div>
   );
 };

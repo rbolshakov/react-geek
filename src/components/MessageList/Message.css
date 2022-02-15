@@ -1,0 +1,16 @@
+.messageList {
+  width: 500px;
+  word-wrap: break-word;
+}
+
+.message {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.messageAuthor {
+  padding: 5px 5px 5px 6px;
+  border-radius: 10px;
+  background-color: #3e5351;
+  color: white;
+}

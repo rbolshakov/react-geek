@@ -1,54 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-.App {
-  background-color: rgb(233, 233, 247);
-  height: 100vh;
-}
-.Message {
-  font-size: 18px;
-  text-align: center;
-  padding-top: 80px;
-}
-.container {
-  width: 1020px;
-  margin: 0 auto;
-}
-.chatWindow {
-  width: 800px;
-  background-color: #fff;
-  min-height: 400px;
-}
-.chatMessage {
-  min-width: 50px;
-  max-width: 80%;
-  background-color: rgb(181, 182, 241);
-  border-radius: 10px;
-  box-sizing: border-box;
-  padding: 5px;
-  margin: 5px;
-  width: fit-content;
-}
-.chatMessage__author {
-  font-size: 16px;
-  font-weight: bold;
-}
-.chatMessage__text {
-  font-size: 14px;
+html {
+  background: linear-gradient(to bottom left, #79c7c5 40%, #f9fbff 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
-.chatInput {
-  width: 800px;
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.messageWrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.chatInput__author {
-  font-size: 16px;
-  height: 20px;
-}
-.chatInput__text {
-  font-size: 14px;
-  height: fit-content;
-  resize: none;
+
+.messageTitle {
+  padding: 5px 5px 5px 6px;
+  border-radius: 10px;
+  background-color: #3e5351;
+  color: white;
 }
