@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import { Message } from "../../App";
-import "./Message.css";
+import React, { FC } from 'react';
+import { Message } from '../../App';
+import './Message.css';
 
 interface MessageListProp {
   messages: Message[];
