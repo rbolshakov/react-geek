@@ -10,6 +10,32 @@ export interface Message {
   author: string;
 }
 
+const botAuthors: string[] = [
+  "Jacque Fresco",
+  "Philippe Starck",
+  "Victor J. Papanek",
+  "Dieter Rams",
+  "Thomas Chippendale",
+  "Karim Rashid",
+  "Ron Arad",
+];
+
+const botText: string[] = [
+  "Лучше быть последним — первым, чем первым — последним.",
+  "На случай, если буду нужен, то я там же, где и был, когда был не нужен.",
+  "Если волк молчит то лучше его не перебивай.",
+  "Каждый в цирке думает, что знает в цирке, но не каждый, что в цирке знает, что в цирке не каждый знает думает.",
+  "Легко вставать, когда ты не ложился.",
+  "За двумя зайцами погонишься — рыбку из пруда не выловишь, делу время, а отмеришь семь раз.",
+  "Каждый думает, что не знает что, но не каждый не знает, что знает, кто не я...",
+  "Кем бы ты ни был, кем бы ты не стал, помни, где ты был и кем ты стал.",
+];
+
+function arrRandom(arr: string[]) {
+  let rand = Math.floor(Math.random() * arr.length);
+  return arr[rand];
+}
+
 interface AppState {
   messages: Message[];
 }
@@ -29,10 +55,10 @@ export const App: FC = () => {
       const timeout = setTimeout(
         () =>
           addMessage({
-            text: `I'm BOT`,
-            author: "BOT",
+            text: arrRandom(botText),
+            author: arrRandom(botAuthors),
           }),
-        1000,
+        Math.floor(Math.random() * 3000),
       );
 
       return () => {
