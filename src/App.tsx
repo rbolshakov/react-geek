@@ -17,6 +17,7 @@ const botAuthors: string[] = [
   "Dieter Rams",
   "Thomas Chippendale",
   "Karim Rashid",
+
   "Ron Arad",
 ];
 
