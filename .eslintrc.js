@@ -25,17 +25,16 @@ module.exports = {
   plugins: ['react'],
   settings: {
     react: {
-      version: 'latest',
+      // version: 'latest',
     },
   },
   rules: {
     'prettier/prettier': [
       'error',
       {
-        singleQuote: true,
+        singleQuote: true
       },
     ],
-
     'react/prop-types': 0,
     'linebreak-style': ['error', 'unix'],
     'quotes': ['warn', 'single'],
@@ -50,3 +49,4 @@ module.exports = {
     },
   ],
 };
+
