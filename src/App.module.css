@@ -1,0 +1,27 @@
+html {
+  background: linear-gradient(to bottom left, #79c7c5 40%, #f9fbff 100%) no-repeat center center fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.messageWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.messageTitle {
+  padding: 5px 5px 5px 6px;
+  border-radius: 10px;
+  background-color: #3e5351;
+  color: white;
+}
