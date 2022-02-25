@@ -38,6 +38,7 @@ export const App: FC = () => {
 
   return (
     <div className={(style.messageWrap, style.container)}>
+      {/*  тут я допишу массив с чатами кликабельными */}
       <h1 className={style.messageTitle} key={nanoid()}>
         Welcome to react
       </h1>
