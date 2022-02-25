@@ -41,8 +41,8 @@ export const App: FC = () => {
       <h1 className={style.messageTitle} key={nanoid()}>
         Welcome to react
       </h1>
-      <MessageList messages={messages} />
-      <Form addMessage={addMessage} />
+      <MessageList messages={messages} key={nanoid()} />
+      <Form addMessage={addMessage} key={nanoid()} />
     </div>
   );
 };
