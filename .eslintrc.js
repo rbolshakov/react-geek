@@ -32,11 +32,12 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        singleQuote: true
+        singleQuote: true,
+        endOfLine: 'auto',
       },
     ],
     'react/prop-types': 0,
-    'linebreak-style': ['error', 'unix'],
+    'linebreak-style': ['error', 'windows'],
     'quotes': ['warn', 'single'],
     'semi': ['warn', 'always'],
   },

@@ -39,11 +39,9 @@ export const App: FC = () => {
   return (
     <div className={(style.messageWrap, style.container)}>
       {/*  тут я допишу массив с чатами кликабельными */}
-      <h1 className={style.messageTitle} key={nanoid()}>
-        Welcome to react
-      </h1>
-      <MessageList messages={messages} key={nanoid()} />
-      <Form addMessage={addMessage} key={nanoid()} />
+      <h1 className={style.messageTitle}>Welcome to react</h1>
+      <MessageList messages={messages} />
+      <Form addMessage={addMessage} />
     </div>
   );
 };
