@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import React, { FC } from 'react';
 import style from './Message.module.css';
 
@@ -15,10 +14,7 @@ export const MessageList: FC<MessageListProp> = ({ messages }) => (
   <ul className={style.messageList}>
     {messages.map((message) => (
       <li className={style.message} key={message.id}>
-        <span className={style.messageAuthor} key={nanoid()}>
-          {message.author}:
-        </span>{' '}
-        {message.text}
+        <span className={style.messageAuthor}>{message.author}:</span> {message.text}
       </li>
     ))}
   </ul>
