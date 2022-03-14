@@ -65,3 +65,26 @@ export interface Message {
 export interface Messages {
   [key: string]: Message[];
 }
+
+export const navigate = [
+  {
+    id: 1,
+    to: '/',
+    name: 'Главная',
+  },
+  {
+    id: 2,
+    to: '/chats',
+    name: 'Чаты',
+  },
+  {
+    id: 3,
+    to: '/about',
+    name: 'О нас',
+  },
+  {
+    id: 4,
+    to: '/profile',
+    name: 'Профиль',
+  },
+];

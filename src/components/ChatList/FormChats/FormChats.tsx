@@ -1,7 +1,7 @@
 import React, { useState, FC } from 'react';
 import { Input, Button } from '@mui/material';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
-import style from './Form.module.css';
+import style from './FormChats.module.css';
 
 interface Message {
   text: string;
@@ -12,7 +12,7 @@ interface FormProps {
   addMessage: (message: Message) => void;
 }
 
-export const Form: FC<FormProps> = ({ addMessage }) => {
+export const FormChats: FC<FormProps> = ({ addMessage }) => {
   const [text, setText] = useState('');
 
   const handleText = (ev: React.FormEvent<HTMLFormElement>) => {

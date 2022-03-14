@@ -1,23 +1,6 @@
 import React, { FC } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
-
-const navigate = [
-  {
-    id: 1,
-    to: '/',
-    name: 'Главная',
-  },
-  {
-    id: 2,
-    to: '/chats',
-    name: 'Чаты',
-  },
-  {
-    id: 3,
-    to: '/about',
-    name: 'О нас',
-  },
-];
+import { navigate } from '../../constants/Constants';
 
 export const NavBar: FC = () => {
   return (
