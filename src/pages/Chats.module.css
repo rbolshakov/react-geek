@@ -10,7 +10,7 @@ html {
   padding-left: 16px;
   padding-right: 16px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 .messageWrap {
@@ -24,4 +24,17 @@ html {
   border-radius: 10px;
   background-color: #3e5351;
   color: white;
+}
+
+.chatsTitle {
+  padding: 5px 5px 5px 6px;
+  border-radius: 10px;
+  background-color: #3e5351;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.chatsWrap {
+  list-style: none;
 }

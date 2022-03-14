@@ -1,20 +1,15 @@
 import React, { FC } from 'react';
-import style from './Message.module.css';
+import { Message } from '../ChatList/MessageList/MessageList';
 
-export interface Message {
-  id: string;
-  text: string;
-  author: string;
-}
 interface MessageListProp {
   messages: Message[];
 }
 
 export const MessageList: FC<MessageListProp> = ({ messages }) => (
-  <ul className={style.messageList}>
+  <ul>
     {messages.map((message) => (
-      <li className={style.message} key={message.id}>
-        <span className={style.messageAuthor}>{message.author}:</span> {message.text}
+      <li key={message.id}>
+        {message.author}: {message.text}
       </li>
     ))}
   </ul>
