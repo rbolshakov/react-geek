@@ -9,7 +9,7 @@ interface FormProps {
   addMessage: (message: Message) => void;
 }
 
-export const Form: FC<FormProps> = ({ addMessage }) => {
+export const Form: FC<FormProps> = () => {
   const { dark, toggleDark } = useContext(ThemeContext);
 
   const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
