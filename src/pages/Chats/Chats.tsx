@@ -2,7 +2,7 @@ import React, { useState, useEffect, FC, useCallback } from 'react';
 import style from './Chats.module.css';
 import { nanoid } from 'nanoid';
 import { Link, Redirect, useParams } from 'react-router-dom';
-import { arrRandom } from '../../utils/ArrRandom';
+import { arrRandom } from '../../utils/arrRandom';
 import { botAuthors, botText, chats, defaultMessages } from '../../constants/Constants';
 import { MessageList } from '../../components/ChatList/MessageList/MessageList';
 import { Form } from '../../components/Form/Form';
