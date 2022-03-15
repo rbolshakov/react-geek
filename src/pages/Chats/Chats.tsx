@@ -60,7 +60,13 @@ export const Chats: FC = () => {
       <ul className={style.chatsWrap}>
         {chats.map((chat) => (
           <li className={style.chatsTitle} key={chat.id}>
-            <Link className={style.chatsTitle} to={`/chats/${chat.id}`}>
+            <Link
+              className={style.chatsTitle}
+              to={`/chats/${chat.id}`}
+              // style={(isActive) => ({
+              //   color: isActive ? 'black' : 'white',
+              // })}
+            >
               {chat.name}
             </Link>
           </li>
