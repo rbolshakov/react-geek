@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FC, useCallback } from 'react';
 import style from './Chats.module.css';
 import { nanoid } from 'nanoid';
-import { Link, Redirect, useParams } from 'react-router-dom';
+import { Link, NavLink, Redirect, useParams } from 'react-router-dom';
 import { arrRandom } from '../../utils/arrRandom';
 import { botAuthors, botText, chats, defaultMessages } from '../../constants/Constants';
 import { MessageList } from '../../components/ChatList/MessageList/MessageList';
@@ -60,15 +60,14 @@ export const Chats: FC = () => {
       <ul className={style.chatsWrap}>
         {chats.map((chat) => (
           <li className={style.chatsTitle} key={chat.id}>
-            <Link
+            <NavLink
               className={style.chatsTitle}
               to={`/chats/${chat.id}`}
-              // style={(isActive) => ({
-              //   color: isActive ? 'black' : 'white',
-              // })}
-            >
+              style={(isActive) => ({
+                color: isActive ? 'black' : 'white',
+              })}>
               {chat.name}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
