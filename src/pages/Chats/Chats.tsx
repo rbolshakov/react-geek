@@ -1,11 +1,12 @@
 import React, { useState, useEffect, FC, useCallback } from 'react';
 import style from './Chats.module.css';
 import { nanoid } from 'nanoid';
-import { Link, Redirect, useParams } from 'react-router-dom';
-import { arrRandom } from '../utils/ArrRandom';
-import { botAuthors, botText, chats, defaultMessages } from '../constants/Constants';
-import { MessageList } from '../components/ChatList/MessageList/MessageList';
-import { Form } from '../components/ChatList/Form/Form';
+import { Link, NavLink, Redirect, useParams } from 'react-router-dom';
+import { arrRandom } from '../../utils/arrRandom';
+import { botAuthors, botText, chats, defaultMessages } from '../../constants/Constants';
+import { MessageList } from '../../components/ChatList/MessageList/MessageList';
+import { Form } from '../../components/Form/Form';
+import { FormChats } from '../../components/ChatList/FormChats/FormChats';
 
 export const Chats: FC = () => {
   const [messages, setMessages] = useState(defaultMessages);
@@ -59,16 +60,22 @@ export const Chats: FC = () => {
       <ul className={style.chatsWrap}>
         {chats.map((chat) => (
           <li className={style.chatsTitle} key={chat.id}>
-            <Link className={style.chatsTitle} to={`/chats/${chat.id}`}>
+            <NavLink
+              className={style.chatsTitle}
+              to={`/chats/${chat.id}`}
+              style={(isActive) => ({
+                color: isActive ? 'black' : 'white',
+              })}>
               {chat.name}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
       <div>
         <MessageList messages={messages[`chat${chatId}`]} />
-        <Form addMessage={handleSendMessage} />
+        <FormChats addMessage={handleSendMessage} />
       </div>
+      <Form addMessage={handleSendMessage} />
     </div>
   );
 };

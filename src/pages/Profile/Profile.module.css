@@ -1,0 +1,16 @@
+.profile {
+  margin-top: 100px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #3e5351;
+  color: white;
+  width: 99%;
+}
+
+.profileWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

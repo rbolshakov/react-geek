@@ -1,5 +1,7 @@
-import React, { useState, FC } from 'react';
-import { Input, Button } from '@mui/material';
+import { Button } from '@mui/material';
+import React, { FC, useContext } from 'react';
+import { ThemeContext } from '../../utils/ThemeContext';
+
 interface Message {
   text: string;
   author: string;
@@ -9,25 +11,22 @@ interface FormProps {
   addMessage: (message: Message) => void;
 }
 
-export const Form: FC<FormProps> = ({ addMessage }) => {
-  const [text, setText] = useState('');
+export const Form: FC<FormProps> = () => {
+  const { dark, toggleDark } = useContext(ThemeContext);
 
-  const handleText = (ev: React.FormEvent<HTMLFormElement>) => {
-    ev.preventDefault();
-    addMessage({
-      text,
-      author: 'User',
-    });
-    setText('');
+  const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (toggleDark) {
+      toggleDark();
+    }
   };
 
   return (
-    <form onSubmit={handleText}>
-      <Input value={text} onChange={(ev) => setText(ev.target.value)} />
-
-      <Button variant="contained" type="submit">
-        Sendd
+    <>
+      <h1>{dark ? '🌙' : '🌞'}</h1>
+      <Button variant="contained" type="submit" onClick={handleOnClick}>
+        Switch to <span> {dark ? '🌞' : '🌙'}</span>
       </Button>
-    </form>
+    </>
   );
 };
