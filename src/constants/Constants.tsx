@@ -19,10 +19,49 @@ export const botText: string[] = [
   'Кем бы ты ни был, кем бы ты не стал, помни, где ты был и кем ты стал.',
 ];
 
-export const defaultMessages = [
+export const defaultMessages: Messages = {
+  chat1: [
+    {
+      id: '1',
+      author: 'Geekbrains',
+      text: 'Welcome to the chat',
+    },
+  ],
+  chat2: [
+    {
+      id: '1',
+      author: 'Geekbrains',
+      text: 'Welcome to the chat',
+    },
+  ],
+  chat3: [
+    {
+      id: '1',
+      author: 'Geekbrains',
+      text: 'Welcome to the chat',
+    },
+  ],
+};
+
+export const chats = [
   {
     id: '1',
-    author: 'Jacque Fresco',
-    text: 'Welcome to the chat',
+    name: 'чат 1',
+  },
+  {
+    id: '2',
+    name: 'чат 2',
+  },
+  {
+    id: '3',
+    name: 'чат 3',
   },
 ];
+export interface Message {
+  id: string;
+  text: string;
+  author: string;
+}
+export interface Messages {
+  [key: string]: Message[];
+}
