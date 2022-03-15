@@ -69,8 +69,8 @@ export interface Messages {
 export const navigate = [
   {
     id: 1,
-    to: '/',
-    name: 'Главная',
+    to: '/profile',
+    name: 'Профиль',
   },
   {
     id: 2,
@@ -81,10 +81,5 @@ export const navigate = [
     id: 3,
     to: '/about',
     name: 'О нас',
-  },
-  {
-    id: 4,
-    to: '/profile',
-    name: 'Профиль',
   },
 ];

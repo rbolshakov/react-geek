@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FC, useCallback } from 'react';
 import style from './Chats.module.css';
 import { nanoid } from 'nanoid';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Redirect, useParams } from 'react-router-dom';
 import { arrRandom } from '../../utils/ArrRandom';
 import { botAuthors, botText, chats, defaultMessages } from '../../constants/Constants';
 import { MessageList } from '../../components/ChatList/MessageList/MessageList';
@@ -51,9 +51,9 @@ export const Chats: FC = () => {
     }
   }, [messages, chatId, handleSendMessage]);
 
-  // if (!messages[`chat${chatId}`]) {
-  //   return <Redirect to="/" />;
-  // }
+  if (!messages[`chat${chatId}`]) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className={(style.messageWrap, style.container)}>

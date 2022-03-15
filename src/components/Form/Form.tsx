@@ -1,5 +1,7 @@
+import { Button } from '@mui/material';
 import React, { FC, useContext } from 'react';
 import { ThemeContext } from '../../utils/ThemeContext';
+
 interface Message {
   text: string;
   author: string;
@@ -22,9 +24,9 @@ export const Form: FC<FormProps> = () => {
   return (
     <>
       <h1>{dark ? '🌙' : '🌞'}</h1>
-      <button onClick={handleOnClick}>
-        Switch to <span>{dark ? '🌞' : '🌙'}</span>
-      </button>
+      <Button variant="contained" type="submit" onClick={handleOnClick}>
+        Switch to <span> {dark ? '🌞' : '🌙'}</span>
+      </Button>
     </>
   );
 };

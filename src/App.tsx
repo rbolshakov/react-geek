@@ -1,14 +1,14 @@
 import React, { FC, Suspense, useState } from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
-import { Main } from './pages/Main';
+import { Main } from './pages/Main/Main';
 import { Chats } from './pages/Chats/Chats';
-import { About } from './pages/About';
+import { About } from './pages/About/About';
 import { NavBar } from './components/NavBar/NavBar';
 import { NotFound } from './pages/NoFound';
 import { Provider } from 'react-redux';
 import { ThemeContext, defaultState } from './utils/ThemeContext';
 import { store } from './store';
-import { Profile } from './pages/Profile';
+import { Profile } from './pages/Profile/Profile';
 
 export const App: FC = () => {
   const [dark, setDark] = useState(defaultState.dark);
