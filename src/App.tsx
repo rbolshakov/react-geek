@@ -9,6 +9,8 @@ import { Provider } from 'react-redux';
 import { ThemeContext, defaultState } from './utils/ThemeContext';
 import { store } from './store';
 import { Profile } from './pages/Profile/Profile';
+import { Article } from '@mui/icons-material';
+import { Articles } from './pages/Articles';
 
 export const App: FC = () => {
   const [dark, setDark] = useState(defaultState.dark);
@@ -42,6 +44,7 @@ export const App: FC = () => {
           </BrowserRouter>
         </Suspense>
       </ThemeContext.Provider>
+      <Articles />
     </Provider>
   );
 };
